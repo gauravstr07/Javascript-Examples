@@ -1,12 +1,14 @@
-const array = [1, 'Gaurav', 5, 'Akshu', 07, 2680, 'Love You💖'];
+const num1 = parseFloat(prompt('Enter first number: '));
+const num2 = parseFloat(prompt('Enter second number: '));
+const num3 = parseFloat(prompt('Enter third number: '));
+let largest;
 
-function getRandomItem(arr){
-    const randomIndex = Math.floor(Math.random() * arr.length);
-
-    const item = arr[randomIndex];
-
-    return item;
+if(num1 >= num2 && num1 >= num3){
+    largest = num1;
+}else if(num2 >= num1 && num2 >= num3){
+    largest =num2;
+}else{
+    largest = num3;
 }
 
-const result = getRandomItem(array);
-console.log(result);
+console.log('Largest number is ' + largest);
