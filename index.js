@@ -1,14 +1,12 @@
-console.log('Calling index.js');
+const array = [1, 'Gaurav', 5, 'Akshu', 07, 2680, 'Love You💖'];
 
-const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+function getRandomItem(arr){
+    const randomIndex = Math.floor(Math.random() * arr.length);
 
-function generateString(length){
-    let result = '';
-    const charactersLength = characters.length;
-    for(let i = 0; i < length; i++){
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-    return result;
+    const item = arr[randomIndex];
+
+    return item;
 }
 
-console.log(generateString(5));
+const result = getRandomItem(array);
+console.log(result);
